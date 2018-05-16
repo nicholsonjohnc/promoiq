@@ -2,13 +2,19 @@
 
 ssh -i web_server_key_pair.pem ec2-user@ec2-35-153-198-209.compute-1.amazonaws.com
 
-## Activate Virtual Environment
+## Virtual Environment Setup
 
-source venv/bin/activate
+Create Virtual Environment
 
-## Install Dependencies
+* virtualenv venv
 
-pip install -r requirements.txt
+Activate Virtual Environment
+
+* source venv/bin/activate
+
+Install Dependencies in Virtual Environment
+
+* pip install -r requirements.txt
 
 ## Run App
 
@@ -18,7 +24,9 @@ python app/main.py
 
 ## Build Docker Container
 
-docker build -t promoiqbackend .
+Do this everytime source changes!
+
+```docker build -t promoiqbackend .```
 
 ## Run App in Docker Locally
 
