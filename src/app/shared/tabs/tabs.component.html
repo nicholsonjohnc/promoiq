@@ -1,0 +1,17 @@
+<ul *ngIf="tabsLayout == 'standard'" class="nav">
+  <li *ngFor="let tab of tabs" class="nav-item">
+     <a (click)="selectTab($event, tab)" class="nav-link {{tab.activeClass}}" href="#{{tab.tabTitle}}">{{tab.tabTitle}}</a> 
+  </li>
+</ul>
+
+<ng-container *ngIf="tabsLayout == 'flex'">
+  <hr>
+  <nav class="nav nav-pills flex-column flex-sm-row">
+    <ng-container *ngFor="let tab of tabs">
+      <a (click)="selectTab($event, tab)" class="flex-sm-fill text-sm-center nav-link {{tab.activeClass}}" href="#{{tab.tabTitle}}">{{tab.tabTitle}}</a>
+    </ng-container>
+  </nav>
+  <hr>
+</ng-container>
+
+<ng-content></ng-content>
