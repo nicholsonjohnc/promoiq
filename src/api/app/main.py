@@ -15,8 +15,8 @@ def uploader():
     s3 = boto3.resource('s3')
     
     # Upload a file.
-    data = open('JOHN_NICHOLSON.jpg', 'rb')
-    s3.Bucket('uploads.promoiq.website').put_object(Key='JOHN_NICHOLSON.jpg', Body=data)
+    data = open('JOHN_NICHOLSON.JPG', 'rb')
+    s3.Bucket('uploads.promoiq.website').put_object(Key='JOHN_NICHOLSON.JPG', Body=data)
 
     return jsonify({'value':5})
 
