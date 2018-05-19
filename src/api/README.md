@@ -26,7 +26,7 @@ NOTE: Ensure proper host and port in main.py.
 
 Do this everytime source changes!
 
-```docker build --rm=true --force-rm=true -t promoiqbackend .```
+```docker build -t promoiqbackend .```
 
 ## Run App in Docker Locally
 
