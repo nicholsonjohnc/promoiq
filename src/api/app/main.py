@@ -18,6 +18,10 @@ def uploader():
     s3.Bucket('uploads.promoiq.website').put_object(Key=file_name, Body=file)
 
     return jsonify({'file_name':file_name})
+    
+@app.route('/v1/test', methods=['GET'])
+def test():
+    return jsonify({'test':1})
 
 if __name__ == '__main__':
     context = SSL.Context(SSL.SSLv23_METHOD)
