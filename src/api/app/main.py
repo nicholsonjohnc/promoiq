@@ -1,5 +1,5 @@
-from flask import Flask, jsonify
-import os
+from flask import Flask, request, jsonify
+from werkzeug import secure_filename
 import boto3
 
 # the all-important app variable:
@@ -7,18 +7,17 @@ app = Flask(__name__)
 
 @app.route('/v1/uploader', methods=['POST'])
 def uploader():
-    files = [f for f in os.listdir('.') if os.path.isfile(f)]
-    for f in files:
-        print(f)
+    file = request.files['file']
+    file_name = secure_filename(file.filename)
     
     # Use AWS S3.
     s3 = boto3.resource('s3')
     
     # Upload a file.
-    data = open('JOHN_NICHOLSON.JPG', 'rb')
-    s3.Bucket('uploads.promoiq.website').put_object(Key='JOHN_NICHOLSON.JPG', Body=data)
+    data = open(file_name, 'rb')
+    s3.Bucket('uploads.promoiq.website').put_object(Key=file_name, Body=data)
 
-    return jsonify({'value':5})
+    return jsonify({'file_name':file_name})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port=80) # Webserver
