@@ -1,6 +1,6 @@
 ## SSH into Webserver
 
-```ssh -i web_server_key_pair.pem ubuntu@ec2-18-207-100-67.compute-1.amazonaws.com```
+```ssh -i web_server_key_pair.pem ubuntu@ec2-34-205-4-129.compute-1.amazonaws.com```
 
 ## Virtual Environment Setup
 
