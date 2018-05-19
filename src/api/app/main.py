@@ -4,7 +4,7 @@ import sys
 # the all-important app variable:
 app = Flask(__name__)
 
-@app.route('/v1/uploader', methods=['GET'])
+@app.route('/v1/uploader', methods=['POST'])
 def uploader():
     return jsonify({'value':5})
 
