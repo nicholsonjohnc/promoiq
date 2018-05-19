@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
 from werkzeug import secure_filename
 import boto3
+from flask_cors import CORS
 
 # the all-important app variable:
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/v1/uploader', methods=['POST'])
 def uploader():

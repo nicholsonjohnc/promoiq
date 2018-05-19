@@ -18,7 +18,7 @@ export class UploaderService {
       })
     };
 
-    return this.http.post<any>('https://ec2-35-153-198-209.compute-1.amazonaws.com/v1/uploader', file, httpOptions)
+    return this.http.post<any>('https://id4f29rcq8.execute-api.us-east-1.amazonaws.com/v1/uploader', file, httpOptions)
     .pipe(
       // console.log(file)
     );
