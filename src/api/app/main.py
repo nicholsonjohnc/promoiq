@@ -1,4 +1,5 @@
 from flask import Flask, jsonify
+import os
 import boto3
 
 # the all-important app variable:
@@ -6,6 +7,10 @@ app = Flask(__name__)
 
 @app.route('/v1/uploader', methods=['POST'])
 def uploader():
+    files = [f for f in os.listdir('.') if os.path.isfile(f)]
+    for f in files:
+        print(f)
+    
     # Use AWS S3.
     s3 = boto3.resource('s3')
     
