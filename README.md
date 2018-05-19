@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-For cloud9, run `ng serve --host 0.0.0.0 --port 8080 --disableHostCheck true`.
+For cloud9, run `ng serve --host 127.0.0.1 --port 8080 --disableHostCheck true`.
 
 ## Code scaffolding
 

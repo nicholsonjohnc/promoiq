@@ -24,6 +24,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ng2-file-input/ng2-file-input.css",
               "src/styles.css"
             ],
             "scripts": [

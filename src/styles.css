@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+.ng2-file-input .ng2-file-input-drop-container span {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.ng2-file-input .ng2-file-input-drop-container button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ng2-file-input .ng2-file-input-drop-container {
+    text-align:center;
+    border: 2px dashed #212529;
+}
+
+.ng2-file-input .ng2-file-input-drop-container.file-is-over {
+    border: 2px dashed #007bff !important;
+    color: #007bff !important;
+}
