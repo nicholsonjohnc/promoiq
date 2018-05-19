@@ -1,13 +1,19 @@
 from flask import Flask, jsonify
-# import sys
-import os
+import boto3
 
 # the all-important app variable:
 app = Flask(__name__)
 
 @app.route('/v1/uploader', methods=['POST'])
 def uploader():
-    return jsonify({'value':os.getcwd()})
+    # Use AWS S3.
+    s3 = boto3.resource('s3')
+    
+    # Upload a file.
+    data = open('JOHN_NICHOLSON.jpg', 'rb')
+    s3.Bucket('uploads.promoiq.website').put_object(Key='JOHN_NICHOLSON.jpg', Body=data)
+
+    return jsonify({'value':5})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port=80) # Webserver
