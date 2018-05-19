@@ -27,5 +27,5 @@ if __name__ == '__main__':
     # context = SSL.Context(SSL.SSLv23_METHOD)
     # context.use_privatekey_file('ssl.key')
     # context.use_certificate_file('ssl.cert')
-    app.run(host='0.0.0.0', debug=True, port=80) # Webserver
+    app.run(host='0.0.0.0', debug=True, port=5000) # Webserver
     # app.run(host='127.0.0.1', debug=True, port=8080) # Localhost (Cloud 9)
