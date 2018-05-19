@@ -1,6 +1,6 @@
 ## SSH into Webserver
 
-```ssh -i web_server_key_pair.pem ec2-user@ec2-18-207-100-67.compute-1.amazonaws.com```
+```ssh -i web_server_key_pair.pem ubuntu@ec2-18-207-100-67.compute-1.amazonaws.com```
 
 ## Virtual Environment Setup
 
@@ -26,7 +26,7 @@ NOTE: Ensure proper host and port in main.py.
 
 Do this everytime source changes!
 
-```docker build -t promoiqbackend .```
+```docker build --rm=true --force-rm=true -t promoiqbackend .```
 
 ## Run App in Docker Locally
 
