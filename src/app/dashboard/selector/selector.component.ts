@@ -17,6 +17,7 @@ export class SelectorComponent implements OnInit {
   onAction(event) {
     if(event.action===Ng2FileInputAction.Added) {
       console.log(event)
+      this.uploaderService.uploadFile(event.file).subscribe(file_name => console.log(file_name));
     }
   }
 
